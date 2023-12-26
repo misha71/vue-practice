@@ -6,7 +6,7 @@ import Alert from "@/components/Alert.vue";
 
 describe("store vuex", () => {
     it("alert isolation/showAlert", () => {
-        store.dispatch("alert/showAlert", {text: ['error'], type: 'danger'});
+        store.dispatch("alert/showAlert", {message: 'error', type: 'danger'});
         expect(store.state.alert.type).toBe('danger');
     });
     it("alert with component", async () => {
@@ -15,7 +15,7 @@ describe("store vuex", () => {
                 plugins: [store]
             }
         });
-        await store.dispatch("alert/showAlert", {text: ['Неверное поле'], type: 'danger'});
+        await store.dispatch("alert/showAlert", {message: 'Неверное поле', type: 'danger'});
         expect(wrapper.html()).toContain("Неверное поле")
     });
 })

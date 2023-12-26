@@ -1,0 +1,8 @@
+Пример применения store можно посмотреть в компоненте:
+/src/components/UI/Modal.vue
+
+Пример использования store с composition api
+/src/components/Item.vue
+
+Пример использования action из одного модуля vuex в другом
+/src/store/queryModule.js
